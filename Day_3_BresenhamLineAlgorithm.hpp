@@ -1,4 +1,4 @@
-
+#pragma once
 
 void drawLine(bool canvas[], size_t sizeX, size_t sizeY, int x1, int y1, int x2, int y2)
 {

@@ -1,8 +1,10 @@
+#include <memory>
 #include"Day_1_Quicksort.hpp"
 #include"Day_2_LongestCommonSubstring.hpp"
 #include"Day_3_BresenhamLineAlgorithm.hpp"
+#include"Day_4DijkstrasShortestPath.hpp"
 
-bool QuickSortTest(const size_t size)
+bool quickSortTest(const size_t size)
 {
     int32_t array[size];
     for(int i = 0; i < size; i++)
@@ -21,7 +23,7 @@ bool QuickSortTest(const size_t size)
     return true;
 }
 
-bool LongestCommonSubstringTest()
+bool longestCommonSubstringTest()
 {
     std::string a = "testtesttestHereComesOurSubstringtesttesttest";
     std::string b = "placeholderplaceholderHereComesOurSubstringplaceholderplaceholder";
@@ -47,12 +49,50 @@ void drawLineTest(uint8_t sizeX, uint8_t sizeY, uint8_t x1, uint8_t y1, uint8_t 
     }
 }
 
+void dijkstrasTest()
+{
+    SharedNode a ( new Node('a') );
+    SharedNode b ( new Node('b') );
+    SharedNode c ( new Node('c') );
+    SharedNode d ( new Node('d') );
+    SharedNode e ( new Node('e') );
+    SharedNode f ( new Node('f') );
+    SharedNode g ( new Node('g') );
+
+    std::vector<std::shared_ptr<Node>> nodes = {a, b, c, d, e, f, g};
+
+    SharedEdge e1 ( new Edge(a, c, 1) );
+    SharedEdge e2 ( new Edge(a, d, 2) );
+    SharedEdge e3 ( new Edge(b, c, 2) );
+    SharedEdge e4 ( new Edge(c, d, 1) );
+    SharedEdge e5 ( new Edge(b, f, 3) );
+    SharedEdge e6 ( new Edge(c, e, 3) );
+    SharedEdge e7 ( new Edge(e, f, 2) );
+    SharedEdge e8 ( new Edge(d, g, 1) );
+    SharedEdge e9 ( new Edge(g, f, 1) );
+    std::vector<SharedEdge> edges = {e1, e2, e3, e4, e5, e6, e7, e8, e9};
+
+    a->distanceFromStart = 0; //Start
+    Dijkstras(nodes, edges);
+
+    std::cout << "Distance: "
+              << f->distanceFromStart << std::endl;
+    auto previous = f;
+    while (previous)
+    {
+        std::cout << previous->id << " ";
+        previous = previous->previous;
+    }
+    std::cout << std::endl;
+}
+
 int main()
 {
     srand(time(NULL));
-    //QuickSortTest(100);
-    //LongestCommonSubstringTest();
-    drawLineTest(10, 10, 1, 1, 5, 9);
+    //quickSortTest(100);
+    //longestCommonSubstringTest();
+    //drawLineTest(10, 10, 1, 1, 5, 9);
+    dijkstrasTest();
 
     return 0;
 }

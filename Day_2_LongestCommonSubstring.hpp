@@ -1,4 +1,7 @@
+#pragma once
+
 #include<string>
+
 std::string LongestCommonString(std::string a, std::string b)
 {
     auto aLength = a.size();
