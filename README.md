@@ -6,3 +6,4 @@ Inspired by: https://medium.com/100-days-of-algorithms
 1) Quicksort
 2) Longest common substring
 3) Bresenham line algorithm
+4) Dijkstras shortest path algorithm

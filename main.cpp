@@ -2,7 +2,8 @@
 #include"Day_1_Quicksort.hpp"
 #include"Day_2_LongestCommonSubstring.hpp"
 #include"Day_3_BresenhamLineAlgorithm.hpp"
-#include"Day_4DijkstrasShortestPath.hpp"
+#include"Day_4_DijkstrasShortestPath.hpp"
+#include"Day_5_TerrainSmoothingAlgorithm.hpp"
 
 bool quickSortTest(const size_t size)
 {
@@ -86,13 +87,27 @@ void dijkstrasTest()
     std::cout << std::endl;
 }
 
+void heightMapTest()
+{
+    float HeightMap[] = { 0,  0,  0, 0,
+                          0, 20,  0, 0,
+                          0,  0, 20, 0,
+                          0,  0,  0, 0  };
+    smoothTerrain(HeightMap, 4, 4);
+    for(int i = 0; i < 16; i++)
+    {
+        std::cout << HeightMap[i] << " ";
+    }
+}
+
 int main()
 {
-    srand(time(NULL));
+    srand( time(NULL) );
     //quickSortTest(100);
     //longestCommonSubstringTest();
     //drawLineTest(10, 10, 1, 1, 5, 9);
-    dijkstrasTest();
+    //dijkstrasTest();
+    heightMapTest();
 
     return 0;
 }
