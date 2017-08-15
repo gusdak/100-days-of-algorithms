@@ -7,3 +7,5 @@ Inspired by: https://medium.com/100-days-of-algorithms
 2) Longest common substring
 3) Bresenham line algorithm
 4) Dijkstras shortest path algorithm
+5) Terrain smoothing algorithm
+6) Moller-Trumbore line-triangle intersection algorithm

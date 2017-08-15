@@ -1,9 +1,11 @@
 #include <memory>
-#include"Day_1_Quicksort.hpp"
-#include"Day_2_LongestCommonSubstring.hpp"
-#include"Day_3_BresenhamLineAlgorithm.hpp"
-#include"Day_4_DijkstrasShortestPath.hpp"
-#include"Day_5_TerrainSmoothingAlgorithm.hpp"
+#include "Day_1_Quicksort.hpp"
+#include "Day_2_LongestCommonSubstring.hpp"
+#include "Day_3_BresenhamLineAlgorithm.hpp"
+#include "Day_4_DijkstrasShortestPath.hpp"
+#include "Day_5_TerrainSmoothingAlgorithm.hpp"
+#include "Common/Vec3.hpp"
+#include "Day_6_MollerTrumboreTriangleIntersection.hpp"
 
 bool quickSortTest(const size_t size)
 {
@@ -100,6 +102,21 @@ void heightMapTest()
     }
 }
 
+void MollerTrumboreLineTriangleIntersectionTest()
+{
+    Vec3 orign(0, 0, 0);
+    Vec3 dir(100, 100, 100);
+    Vec3 t1(1, 0, 0);
+    Vec3 t2(0, 1, 0);
+    Vec3 t3(0, 0, 1);
+    Vec3 intersectionPoint;
+
+    if(traceRayMollerTrumbore(orign, dir, t1, t2, t3, intersectionPoint))
+    {
+        std::cout << intersectionPoint << std::endl;
+    }
+}
+
 int main()
 {
     srand( time(NULL) );
@@ -107,7 +124,8 @@ int main()
     //longestCommonSubstringTest();
     //drawLineTest(10, 10, 1, 1, 5, 9);
     //dijkstrasTest();
-    heightMapTest();
+    //heightMapTest();
+    MollerTrumboreLineTriangleIntersectionTest();
 
     return 0;
 }
