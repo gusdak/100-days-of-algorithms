@@ -6,6 +6,7 @@
 #include "Day_5_TerrainSmoothingAlgorithm.hpp"
 #include "Common/Vec3.hpp"
 #include "Day_6_MollerTrumboreTriangleIntersection.hpp"
+#include "Day_7_XiaolinWuLineAlgorithm.hpp"
 
 bool quickSortTest(const size_t size)
 {
@@ -117,6 +118,20 @@ void MollerTrumboreLineTriangleIntersectionTest()
     }
 }
 
+void drawAntialiasedLineTest(uint8_t sizeX, uint8_t sizeY, uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2)
+{
+    uint16_t canvas[sizeX * sizeY] = { 0 };
+    drawAntialiasedLine(canvas, sizeX, x1, y1, x2, y2);
+    for(int x = 0; x < sizeX; x++)
+    {
+        for(int y = 0; y < sizeY; y++)
+        {
+            std::cout << canvas[x + sizeX * y] << "\t";
+        }
+        std::cout << std::endl;
+    }
+}
+
 int main()
 {
     srand( time(NULL) );
@@ -125,7 +140,8 @@ int main()
     //drawLineTest(10, 10, 1, 1, 5, 9);
     //dijkstrasTest();
     //heightMapTest();
-    MollerTrumboreLineTriangleIntersectionTest();
+    //MollerTrumboreLineTriangleIntersectionTest();
+    drawAntialiasedLineTest(10, 10, 1, 1, 7, 9);
 
     return 0;
 }
