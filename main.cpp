@@ -7,6 +7,7 @@
 #include "Common/Vec3.hpp"
 #include "Day_6_MollerTrumboreTriangleIntersection.hpp"
 #include "Day_7_XiaolinWuLineAlgorithm.hpp"
+#include "Day_8_BinarySearch.hpp"
 
 bool quickSortTest(const size_t size)
 {
@@ -132,6 +133,12 @@ void drawAntialiasedLineTest(uint8_t sizeX, uint8_t sizeY, uint8_t x1, uint8_t y
     }
 }
 
+bool binarySearchTest()
+{
+    int32_t array[] = {0, 1, 10, 15, 20, 100, 200, 321, 500};
+    return binarySearch(array, 100, 0, 9) == 5;
+};
+
 int main()
 {
     srand( time(NULL) );
@@ -141,7 +148,9 @@ int main()
     //dijkstrasTest();
     //heightMapTest();
     //MollerTrumboreLineTriangleIntersectionTest();
-    drawAntialiasedLineTest(10, 10, 1, 1, 7, 9);
+    //drawAntialiasedLineTest(10, 10, 1, 1, 7, 9);
+    //binarySearchTest();
+
 
     return 0;
 }
