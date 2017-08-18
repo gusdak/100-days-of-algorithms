@@ -11,3 +11,4 @@ Inspired by: https://medium.com/100-days-of-algorithms
 6) Moller-Trumbore line-triangle intersection algorithm
 7) Xiaolin Wu's line algorithm
 8) Binary search
+9) Greatest common divisor

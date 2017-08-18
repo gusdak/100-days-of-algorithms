@@ -8,6 +8,7 @@
 #include "Day_6_MollerTrumboreTriangleIntersection.hpp"
 #include "Day_7_XiaolinWuLineAlgorithm.hpp"
 #include "Day_8_BinarySearch.hpp"
+#include "Day_9_GreatestCommonDivisor.hpp"
 
 bool quickSortTest(const size_t size)
 {
@@ -139,6 +140,11 @@ bool binarySearchTest()
     return binarySearch(array, 100, 0, 9) == 5;
 };
 
+bool GreatestCommonDivisorTest()
+{
+    std::cout << "res: " << GetGreatestCommonDivisor(120, 35) << std::endl;
+}
+
 int main()
 {
     srand( time(NULL) );
@@ -150,6 +156,7 @@ int main()
     //MollerTrumboreLineTriangleIntersectionTest();
     //drawAntialiasedLineTest(10, 10, 1, 1, 7, 9);
     //binarySearchTest();
+    GreatestCommonDivisorTest();
 
 
     return 0;
