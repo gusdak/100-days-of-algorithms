@@ -12,3 +12,4 @@ Inspired by: https://medium.com/100-days-of-algorithms
 7) Xiaolin Wu's line algorithm
 8) Binary search
 9) Greatest common divisor
+10)Monte-Carlo pi

@@ -9,6 +9,7 @@
 #include "Day_7_XiaolinWuLineAlgorithm.hpp"
 #include "Day_8_BinarySearch.hpp"
 #include "Day_9_GreatestCommonDivisor.hpp"
+#include "Day_10_MonteCarloPi.hpp"
 
 bool quickSortTest(const size_t size)
 {
@@ -142,7 +143,7 @@ bool binarySearchTest()
 
 bool GreatestCommonDivisorTest()
 {
-    std::cout << "res: " << GetGreatestCommonDivisor(120, 35) << std::endl;
+    return  GetGreatestCommonDivisor(120, 35) == 5;
 }
 
 int main()
@@ -156,8 +157,8 @@ int main()
     //MollerTrumboreLineTriangleIntersectionTest();
     //drawAntialiasedLineTest(10, 10, 1, 1, 7, 9);
     //binarySearchTest();
-    GreatestCommonDivisorTest();
-
+    //GreatestCommonDivisorTest();
+    MonteCarloPi(1000);
 
     return 0;
 }
