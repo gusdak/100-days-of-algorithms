@@ -10,6 +10,7 @@
 #include "Day_8_BinarySearch.hpp"
 #include "Day_9_GreatestCommonDivisor.hpp"
 #include "Day_10_MonteCarloPi.hpp"
+#include "Day_11_BubbleSort.hpp"
 
 bool quickSortTest(const size_t size)
 {
@@ -146,6 +147,25 @@ bool GreatestCommonDivisorTest()
     return  GetGreatestCommonDivisor(120, 35) == 5;
 }
 
+bool bubbleSortTest(const size_t size)
+{
+    int32_t array[size];
+    for(int i = 0; i < size; i++)
+    {
+        array[i] = rand();
+    }
+
+    bubbleSort(array, size);
+
+    for(int i=0; i < size - 1; i++)
+    {
+        if (array[i] > array[i + 1])
+            return false;
+    }
+
+    return true;
+}
+
 int main()
 {
     srand( time(NULL) );
@@ -158,7 +178,8 @@ int main()
     //drawAntialiasedLineTest(10, 10, 1, 1, 7, 9);
     //binarySearchTest();
     //GreatestCommonDivisorTest();
-    MonteCarloPi(1000);
+    //MonteCarloPi(1000);
+    bubbleSortTest(100);
 
     return 0;
 }
