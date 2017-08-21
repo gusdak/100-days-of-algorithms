@@ -14,3 +14,4 @@ Inspired by: https://medium.com/100-days-of-algorithms
 9) Greatest common divisor
 10) Monte-Carlo pi
 11) Bubble sort
+12) Binary search tree

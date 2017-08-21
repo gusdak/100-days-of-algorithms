@@ -11,6 +11,8 @@
 #include "Day_9_GreatestCommonDivisor.hpp"
 #include "Day_10_MonteCarloPi.hpp"
 #include "Day_11_BubbleSort.hpp"
+#include "Day_12_EllerMazeAlgorithm.hpp"
+#include "Day_12_BinarySearchTree.hpp"
 
 bool quickSortTest(const size_t size)
 {
@@ -166,6 +168,20 @@ bool bubbleSortTest(const size_t size)
     return true;
 }
 
+void binaryTreeTest()
+{
+    BinaryTree bTree;
+    bTree.insert(10);
+    bTree.insert(14);
+    bTree.insert(6);
+    bTree.insert(5);
+    bTree.insert(11);
+    bTree.insert(18);
+    bTree.insert(8);
+    auto test = bTree.search(6);
+    std::cout << test->left->nodeValue << " " << test->right->nodeValue << std::endl;
+}
+
 int main()
 {
     srand( time(NULL) );
@@ -179,7 +195,8 @@ int main()
     //binarySearchTest();
     //GreatestCommonDivisorTest();
     //MonteCarloPi(1000);
-    bubbleSortTest(100);
+    //bubbleSortTest(100);
+    binaryTreeTest();
 
     return 0;
 }
