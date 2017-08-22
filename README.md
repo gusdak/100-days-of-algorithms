@@ -15,3 +15,4 @@ Inspired by: https://medium.com/100-days-of-algorithms
 10) Monte-Carlo pi
 11) Bubble sort
 12) Binary search tree
+13) Linked list reversing

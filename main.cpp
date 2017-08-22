@@ -11,8 +11,8 @@
 #include "Day_9_GreatestCommonDivisor.hpp"
 #include "Day_10_MonteCarloPi.hpp"
 #include "Day_11_BubbleSort.hpp"
-#include "Day_12_EllerMazeAlgorithm.hpp"
 #include "Day_12_BinarySearchTree.hpp"
+#include "Day_13_LinkedListReversing.hpp"
 
 bool quickSortTest(const size_t size)
 {
@@ -182,6 +182,27 @@ void binaryTreeTest()
     std::cout << test->left->nodeValue << " " << test->right->nodeValue << std::endl;
 }
 
+void reversingListTest()
+{
+    LNode* head = new LNode(1);
+    LNode* current = head;
+    current->next = new LNode(2);
+    current = current->next;
+    current->next = new LNode(3);
+    current = current->next;
+    current->next = new LNode(4);
+    current = current->next;
+    current->next = new LNode(5);
+    head = reverseList(head);
+    current = head;
+
+    while(current != nullptr)
+    {
+        std::cout << current->value << std::endl;
+        current = current->next;
+    }
+};
+
 int main()
 {
     srand( time(NULL) );
@@ -196,7 +217,8 @@ int main()
     //GreatestCommonDivisorTest();
     //MonteCarloPi(1000);
     //bubbleSortTest(100);
-    binaryTreeTest();
+    //binaryTreeTest();
+    reversingListTest();
 
     return 0;
 }
