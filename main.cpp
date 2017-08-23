@@ -13,6 +13,7 @@
 #include "Day_11_BubbleSort.hpp"
 #include "Day_12_BinarySearchTree.hpp"
 #include "Day_13_LinkedListReversing.hpp"
+#include "Day_14_InsertionSort.hpp"
 
 bool quickSortTest(const size_t size)
 {
@@ -203,6 +204,25 @@ void reversingListTest()
     }
 };
 
+bool insertionSortTest(const size_t size)
+{
+    int32_t array[size];
+    for(int i = 0; i < size; i++)
+    {
+        array[i] = rand();
+    }
+
+    insertionSort(array, size);
+
+    for(int i=0; i < size - 1; i++)
+    {
+        if (array[i] > array[i + 1])
+            return false;
+    }
+
+    return true;
+}
+
 int main()
 {
     srand( time(NULL) );
@@ -218,7 +238,8 @@ int main()
     //MonteCarloPi(1000);
     //bubbleSortTest(100);
     //binaryTreeTest();
-    reversingListTest();
+    //reversingListTest();
+    insertionSortTest(100);
 
     return 0;
 }
