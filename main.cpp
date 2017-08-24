@@ -14,6 +14,7 @@
 #include "Day_12_BinarySearchTree.hpp"
 #include "Day_13_LinkedListReversing.hpp"
 #include "Day_14_InsertionSort.hpp"
+#include "Day_15_CountingSort.hpp"
 
 bool quickSortTest(const size_t size)
 {
@@ -223,6 +224,27 @@ bool insertionSortTest(const size_t size)
     return true;
 }
 
+bool countingSortTest(const size_t size)
+{
+    uint8_t array[size];
+    for(int i = 0; i < size; i++)
+    {
+        array[i] = rand() % std::numeric_limits<uint8_t >::max();
+    }
+
+    countingSort(array, size, std::numeric_limits<uint8_t>::min(),
+                              std::numeric_limits<uint8_t >::max());
+
+    for(int i=0; i < size - 1; i++)
+    {
+        if (array[i] > array[i + 1])
+            return false;
+    }
+
+    return true;
+}
+
+
 int main()
 {
     srand( time(NULL) );
@@ -239,7 +261,9 @@ int main()
     //bubbleSortTest(100);
     //binaryTreeTest();
     //reversingListTest();
-    insertionSortTest(100);
+    //insertionSortTest(100);
+    countingSortTest(100);
+
 
     return 0;
 }

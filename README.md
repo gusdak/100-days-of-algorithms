@@ -17,3 +17,4 @@ Inspired by: https://medium.com/100-days-of-algorithms
 12) Binary search tree
 13) Linked list reversing
 14) Insertion sort
+15) Conting sort
