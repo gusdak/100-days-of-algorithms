@@ -15,6 +15,7 @@
 #include "Day_13_LinkedListReversing.hpp"
 #include "Day_14_InsertionSort.hpp"
 #include "Day_15_CountingSort.hpp"
+#include "Day_16_MergeAlgorithm.hpp"
 
 bool quickSortTest(const size_t size)
 {
@@ -244,6 +245,17 @@ bool countingSortTest(const size_t size)
     return true;
 }
 
+bool mergeTest()
+{
+    int array1[] = {-1, 0, 100};
+    int array2[] = {-2, -1, 0, 120};
+    int array3[7];
+    merge(array1, array2, array3, 3, 4);
+    for(int i = 0; i <  7; i++)
+    {
+        std::cout << array3[i] << std::endl;
+    }
+}
 
 int main()
 {
@@ -262,7 +274,8 @@ int main()
     //binaryTreeTest();
     //reversingListTest();
     //insertionSortTest(100);
-    countingSortTest(100);
+    //countingSortTest(100);
+    mergeTest();
 
 
     return 0;
