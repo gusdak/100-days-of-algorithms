@@ -19,3 +19,4 @@ Inspired by: https://medium.com/100-days-of-algorithms
 14) Insertion sort
 15) Conting sort
 16) Merge algorithm
+17) Hanoi tower

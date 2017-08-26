@@ -16,6 +16,7 @@
 #include "Day_14_InsertionSort.hpp"
 #include "Day_15_CountingSort.hpp"
 #include "Day_16_MergeAlgorithm.hpp"
+#include "Day_17_HanoiTower.hpp"
 
 bool quickSortTest(const size_t size)
 {
@@ -275,8 +276,7 @@ int main()
     //reversingListTest();
     //insertionSortTest(100);
     //countingSortTest(100);
-    mergeTest();
-
-
+    //mergeTest();
+    hanoiTower(3);
     return 0;
 }
