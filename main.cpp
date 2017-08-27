@@ -17,6 +17,7 @@
 #include "Day_15_CountingSort.hpp"
 #include "Day_16_MergeAlgorithm.hpp"
 #include "Day_17_HanoiTower.hpp"
+#include "Day_18_TinyEncriptionAlgorithm.hpp"
 
 bool quickSortTest(const size_t size)
 {
@@ -258,6 +259,27 @@ bool mergeTest()
     }
 }
 
+bool tynyEncriptionTest()
+{
+    uint32_t input[] = {4564321, 5463132};
+    uint32_t result[] = {4564321, 5463132};
+
+    uint32_t key[] = {0, 2, 100100, 10};
+    encrypt(input, key);
+    decrypt(input, key);
+
+    if(result[0] = input[0] && result[1] == input[1])
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+
+
+}
+
 int main()
 {
     srand( time(NULL) );
@@ -277,6 +299,9 @@ int main()
     //insertionSortTest(100);
     //countingSortTest(100);
     //mergeTest();
-    hanoiTower(3);
+    //hanoiTower(3);
+    tynyEncriptionTest();
+
+
     return 0;
 }

@@ -17,6 +17,7 @@ Inspired by: https://medium.com/100-days-of-algorithms
 12) Binary search tree
 13) Linked list reversing
 14) Insertion sort
-15) Conting sort
+15) Counting sort
 16) Merge algorithm
 17) Hanoi tower
+18) Tiny encryption algorithm
