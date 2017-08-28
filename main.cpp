@@ -18,6 +18,7 @@
 #include "Day_16_MergeAlgorithm.hpp"
 #include "Day_17_HanoiTower.hpp"
 #include "Day_18_TinyEncriptionAlgorithm.hpp"
+#include "Day_19_XorSwap.hpp"
 
 bool quickSortTest(const size_t size)
 {
@@ -276,8 +277,21 @@ bool tynyEncriptionTest()
     {
         return false;
     }
+}
 
-
+bool xorSwapTest()
+{
+    int a = 3;
+    int b = 4;
+    xorSwap(&a, &b);
+    if(a == 4 && b == 3)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 int main()
@@ -300,8 +314,8 @@ int main()
     //countingSortTest(100);
     //mergeTest();
     //hanoiTower(3);
-    tynyEncriptionTest();
-
+    //tynyEncriptionTest();
+    xorSwapTest();
 
     return 0;
 }

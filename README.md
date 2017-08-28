@@ -21,3 +21,4 @@ Inspired by: https://medium.com/100-days-of-algorithms
 16) Merge algorithm
 17) Hanoi tower
 18) Tiny encryption algorithm
+19) Xor swap
